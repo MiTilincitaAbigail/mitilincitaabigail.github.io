@@ -1,0 +1,219 @@
+
+<html>
+<style>
+
+.header{
+    position: relative;
+   animation-name: title;
+   animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+animation-timing-function: linear;
+
+
+
+}
+
+a:link {
+  color: #00E7FF;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #00E7FF;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #5D93FF;
+  background-color: transparent;
+  text-decoration: underline;
+
+}
+
+a:active {
+  color: #002F8E;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+body {
+   background-image: url('bg.jpg');
+   background-repeat: no-repeat;
+    background-attachment: fixed;
+  background-size: 100% 100%;
+   font-family: Trebuchet MS;
+ 
+}
+
+ 
+ @keyframes title {
+  0%   {top:10px;}
+  50%  {top:2px; }
+  100%  {top:10px; }
+}
+
+ @keyframes snd {
+  0%   {color: pink; width: 260px;}
+  25%  {color: yellow; width: 280px;}
+  50%  {color: cyan; width: 260px;}
+  75% {color: lightgreen; width: 280px;}
+   100% {color: pink; width: 260px;}
+}
+
+.link{
+
+ position: relative;
+  bottom:0px; 
+  font-size:150%;
+ transition:0.11s; 
+
+ 
+}
+
+.link:hover{   
+ bottom:2px; 
+  font-size:155%;
+  }
+  
+ .link:active{   
+ bottom:-2px; 
+   font-size:145%;
+  }
+.fixed {
+  position: fixed;
+  bottom: -3px;
+  right: 0;
+  width: 290px;
+  font-size:130%;
+ transition : 0.9s;
+   animation-name: snd;
+  animation-duration: 4s;
+    animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+}
+ .topnav {
+  background-color: #333;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  
+  color: #f2f2f2;
+  text-align: center;
+  padding: 8px 24px;
+  text-decoration: none;
+  font-size: 17px;
+  transition: 0.1s;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #0DC2D5;
+  color: black;
+  font-size:20px;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #080374;
+  color: white;
+    font-size:20px;
+}
+
+.info{
+
+  padding-right: 200px;
+
+  padding-left:200px;
+}
+
+</style>
+  <head> 
+
+    <title>Acerca de IquiqueHub</title> 
+  </head>
+<script>
+
+var str = "ＩｑｕｉｑｕｅＨｕｂ es un experimento creado por el Helix con el fin de probar cómo se hace una página web. Se solicita no juzgar al sitio por sus apariencias ya que la mitad del código de este fue copypasteado de tutoriales y la otra mitad fue escrita durante una sesión intensa de consumo excesivo de Cola Cao.";
+var arr = Array.from(str);
+
+function addTxt(text){
+var txt = document.getElementById("info"); 
+ txt.textContent+=text;
+}
+function WriteText(){
+
+
+var i = 0;
+while(i<arr.length){
+setTimeout(addTxt,20*i,arr[i]);
+ i++;
+}}
+
+
+
+</script>	
+
+  <body onload="WriteText()" text="white" style="text-align:center;">
+  
+  
+  <div class="topnav">
+  <a href="https://mitilincitaabigail.github.io">Inicio</a>
+  <a class="active"  href="https://mitilincitaabigail.github.io/info">Mi deseo</a>
+
+</div>
+
+
+  
+  <p class="header" style="font-size:300%;"> 
+	Mi deseo
+	</p>
+ 	
+
+	
+<br> <br> <br> <br> <br> <br> <br> <br> <br> <br> 
+	
+
+	
+<p id="info" class="info" style="font-size:130%"> </p>
+  <br>
+    <br>
+	<p style="font-size:150%">
+
+
+
+</p>    
+
+<script>
+
+function playVideo(){
+
+var vid = document.getElementById("vid");
+vid.volume = 0.4;
+vid.play();
+
+var txt = document.getElementById("vidtxt");
+
+txt.textContent = "gracias";
+
+}
+
+</script>
+ 
+
+  <p id="vidtxt">haz click en el pez, porfa</p>
+    <video id="vid" onclick="playVideo()" width="640" height="480" loop>
+  <source id="cony" src="fish.mp4" type="video/mp4">
+
+
+</video>
+
+
+
+    
+  </body>
+</html>

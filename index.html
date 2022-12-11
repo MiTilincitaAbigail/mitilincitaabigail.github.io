@@ -1,0 +1,212 @@
+
+<html>
+<style>
+
+.header{
+    position: relative;
+   animation-name: title;
+   animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+animation-timing-function: linear;
+
+
+}
+
+a:link {
+  color: #00E7FF;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #00E7FF;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #5D93FF;
+  background-color: transparent;
+  text-decoration: underline;
+
+}
+
+a:active {
+  color: #002F8E;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+body {
+   background-image: url("bg.jpg");
+   background-repeat: no-repeat;
+    background-attachment: fixed;
+  background-size: 100% 100%;
+   font-family: Trebuchet MS;
+ 
+}
+
+ 
+ @keyframes title {
+  0%   {top:10px;}
+  50%  {top:2px; }
+  100%  {top:10px; }
+}
+
+ @keyframes snd {
+  0%   {color: pink; width: 260px;}
+  25%  {color: yellow; width: 280px;}
+  50%  {color: cyan; width: 260px;}
+  75% {color: lightgreen; width: 280px;}
+   100% {color: pink; width: 260px;}
+}
+
+.link{
+
+ position: relative;
+  bottom:0px; 
+  font-size:150%;
+ transition:0.11s; 
+
+ 
+}
+
+.link:hover{   
+ bottom:2px; 
+  font-size:155%;
+  }
+  
+ .link:active{   
+ bottom:-2px; 
+   font-size:145%;
+  }
+.fixed {
+  position: fixed;
+  bottom: -3px;
+  right: 0;
+  width: 290px;
+  font-size:130%;
+ transition : 0.9s;
+   animation-name: snd;
+  animation-duration: 4s;
+    animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+}
+.fixedForm {
+  position: fixed;
+  bottom: -3px;
+  left: 0;
+  width: 290px;
+  font-size:130%;
+ transition : 0.9s;
+ 
+}
+ .topnav {
+  background-color: #333;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  
+  color: #f2f2f2;
+  text-align: center;
+  padding: 8px 24px;
+  text-decoration: none;
+  font-size: 17px;
+  transition: 0.1s;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #0DC2D5;
+  color: black;
+  font-size:20px;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #080374;
+  color: white;
+    font-size:20px;
+}
+</style>
+  <head> 
+	
+    <title>IquiqueHub</title> 
+  </head>
+ <script>
+   var audioElement = document.createElement('audio');
+   audioElement.setAttribute('src', "music.mp3");
+   audioElement.volume = 0.4;
+audioElement.load();
+
+
+window.onclick= function(event) {
+  
+
+
+ 
+  
+      if(audioElement.paused){
+	  audioElement.play();
+	  var txt = document.getElementById("snd");
+	  txt.textContent = "Música de fondo...";
+	  txt.style.bottom = "-1px";
+	  txt.style.color = "#ffffff";
+	  
+	  document.body.style.background = "#11111 url('bg.jpg') no-repeat center center 200% 200%";
+	  
+}	
+
+
+};
+ 
+function myFunction() {
+  audioElement.play();
+}
+function getPages(){
+urls = document.querySelectorAll('a'); for (url in urls) console.log(urls[url].href);
+
+}
+
+</script>
+
+  <body onloadstart="myFunction()" text="white" style="text-align:center;">
+  
+  
+  <div class="topnav">
+  <a class="active" href="https://mitilincitaabigail.github.io">Inicio</a>
+  <a href="https://mitilincitaabigail.github.io/info">Mi deseo</a>
+
+</div>
+
+
+
+  
+  <p class="header" style="font-size:300%;"> 
+	¡Bienvenida a mi deseo!
+	</p>
+ 	
+
+	
+<br> <br> <br> <br> <br> <br> <br> <br> <br> <br> 
+	
+	
+
+    
+	
+	<br><br><br><br><br><br>
+
+	
+
+<p id="snd" class="fixed"> Haz click para activar la música. </p>
+
+
+    
+	
+
+    
+  </body>
+</html>
